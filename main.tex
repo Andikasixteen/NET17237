@@ -184,15 +184,15 @@ Jika instalasi sudah selesai, coba buka Git Bash, maka akan muncul program baru 
 Ganti {\tt email@akun.github} dengan email yang terdaftar pada akun GitHub. Selanjutnya jika muncul beberapa pertanyaan seperti berikut ini tekan [enter].
 
 \begin{lstlisting}[language=Terminal]
- Enter a file in which to save the key (/Users/YOU/.ssh/id_ed25519:
- Enter passphrase (empty for no passphrase):
- Enter same passphrase again:
+ Enter a file in which to save the key .....
+ Enter passphrase .....
+ Enter same .....
 \end{lstlisting}
 
-Jika proses diatas berhasil maka terbentuk folder baru dengan nama {\tt .ssh}. Didalam folder tersebut terdapat \textit{private key} dan \textit{public key}. Bukan file \textit{public key} (id\_ed25519.pub) dan \textit{copy} isi dari file tersebut.
+Jika proses diatas berhasil maka terbentuk folder baru dengan nama {\tt .ssh}. Didalam folder tersebut terdapat \textit{private key} dan \textit{public key}. Bukan file \textit{public key} (id\_ed25519.pub) dengan perintah \textit{cat} dan \textit{copy} isi dari file tersebut.
 
 \item Menambahkan SSH-Key ke Akun GitHub \\
-Untuk menambahkan SSH-Key ke akun GitHub pertama login terlebih dahulu. Setelah berhasil login klik pada gambar profil sehingga tampil menu dropdown seperti pada Gambar \ref{gam:langkah-ssh} nomor 1. Selanjutnya pilih menu \textbf{Setting} sepertin yang ditunukan pada nomor 2. Setelah memilih menu \textbf{Setting} maka muncul halaman setting dengan menu di sidebar sebelah kiri. Pada menu sebelah kiri pilih menu \textbf{SSH and GPG keys} seperti pada nomor 3. Kemudian klik tombol \textbf{New SSH key} maka akan muncul form menambahkan SSH seperti yang diperlihatkan pada Gambar \ref{gam:form-ssh}.
+Untuk menambahkan SSH-Key ke akun GitHub pertama login terlebih dahulu. Setelah berhasil login klik pada gambar profil sehingga tampil menu dropdown seperti pada Gambar \ref{gam:langkah-ssh} nomor 1. Selanjutnya pilih menu \textbf{Setting} sepertin yang ditunukan pada nomor 2. Setelah memilih menu \textbf{Setting} maka muncul halaman setting dengan menu di sidebar sebelah kiri. Pada menu sebelah kiri pilih menu \textbf{SSH and GPG keys} seperti pada nomor 3. Kemudian klik tombol \textbf{New SSH key} maka akan muncul form menambahkan SSH seperti yang diperlihatkan pada Gambar \ref{gam:tambah-ssh}.
 
 \begin{figure}[!ht]
 \centering
@@ -379,7 +379,7 @@ export HADOOP_ROOT_LOGGER="WARN"
 
 \item Menambahkan Hadoop ke {\tt .bashrc}
 \begin{lstlisting}[language=Terminal]
- sudo nano ~/.bashrc
+ sudo nano /home/hdfs/.bashrc
 \end{lstlisting}
 
 \begin{lstlisting}[language=Bash]
@@ -523,6 +523,7 @@ Berikut bebrapa file yang perlu dikonfigurasi dan lakukan dengan hati-hati serta
  start-yarn.sh
 \end{lstlisting}
 
+\clearpage
 \item Cek Hadoop Service
 \begin{itemize}
 \item Jalankan perintah {\tt jps}
@@ -569,7 +570,7 @@ atau
 \newday{Part \#3}
 \newthought{Program WordCount bawaan Hadoop}
 
-Jika sudah selesai malakukan instalasi Hadoop, maka dapat mencoba program bawaan Hadoop untuk memahami bagaimana proses dan cara kerja Hadoop dalam memproses data input hingga menghasilkan sebuah output. Salah satu program yang sudah disediakan oleh Hadoop adalah WordCount, yaitu program menghitung jumlah kata dalam data input yang dibarikan. Silahkan ikuti langkah-langkah berikut ini untuk mengetahui cara penggunaan program WordCount.
+Jika sudah selesai malakukan instalasi Hadoop, maka dapat mencoba program bawaan Hadoop untuk memahami bagaimana proses dan cara kerja Hadoop dalam memproses data input hingga menghasilkan sebuah output. Salah satu program yang sudah disediakan oleh Hadoop adalah WordCount, yaitu program menghitung jumlah kata dalam data input yang diberikan. Silahkan ikuti langkah-langkah berikut ini untuk mengetahui cara penggunaan program WordCount.
 
 \begin{enumerate}
 \item Jalankan Hadoop Service
@@ -585,18 +586,17 @@ Jika sudah selesai malakukan instalasi Hadoop, maka dapat mencoba program bawaan
 
 \item Download data teks dengan perintah \textit{wget}
 \begin{lstlisting}[language=Terminal]
- wget ""
+ wget "https://raw.githubusercontent.com/muhdavi-pnl/NET17237/main/data/4300.txt"
 \end{lstlisting}
 
-\item Pindahkan file {\tt dataWordCount.txt} ke folder input di HDFS
+\item Pindahkan file {\tt 4300.txt} ke folder input di HDFS
 \begin{lstlisting}[language=Terminal]
  hadoop fs -put 4300.txt /input
 \end{lstlisting}
 
 \item Jalankan program WordCount
 \begin{lstlisting}[language=Terminal]
- hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-
- examples-3.3.4.jar wordcount /input/4300.txt /output
+ hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.4.jar wordcount /input/4300.txt /output
 \end{lstlisting} 
 %hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.0.jar wordcount /input/ /output2 -> untuk semua file dari folder input
 
@@ -611,8 +611,13 @@ Jika sudah selesai malakukan instalasi Hadoop, maka dapat mencoba program bawaan
 \end{lstlisting} 
 \end{enumerate}
 
-\newthought{Tugas Praktikum} \\
-Screenshot hasil dari langkah 6 dan 7 dan masukkan ke dalam laporan. Kumpulkan melalui {\tt pull requests} dengan format pesan "\textit{Laporan dd-mm-yyyy an. Nama}".
+\newthought{Tugas Kelompok Praktikum} \\
+\begin{enumerate}
+\item Buatlah sebuah konfigurasi environment Big Data dengan beberapa Node sesuai dengan jumlah anggota dalam kelompok.
+\item Jalankan program \textit{WordCount} dengan data yang telah di sediakan di \url{http://www.cs.biu.ac.il/~koppel/blogs/blogs.zip}. 
+\item Buatlah Laporan tentang tugas praktikum tersebut dan perintah-perintah pada Hadoop dalam format PDF sesuai template yang diberikan di GitHub Classroom. 
+\item Format penamaan file PDF adalah \textit{NIM - Nama Mahasiswa.pdf}.
+\end{enumerate}
 
 \hrulefill
 
