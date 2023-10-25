@@ -644,7 +644,7 @@ Pada pertemuan sebelumnya telah mencoba program WordCount bawaan Hadoop. Jika de
 
 \item Buat classpath
 \begin{lstlisting}[language=Terminal]
- export HADOOP\_CLASSPATH=\$(\$HADOOP\_HOME/bin/hadoop classpath)
+ export HADOOP_CLASSPATH=$($HADOOP_HOME/bin/hadoop classpath)
 \end{lstlisting} 
 
 \item Buat folder baru untuk menampung hasil \textit{compile} program java dan ubah hak aksesnya
@@ -655,7 +655,7 @@ Pada pertemuan sebelumnya telah mencoba program WordCount bawaan Hadoop. Jika de
 
 \item Compile file WordCount.java
 \begin{lstlisting}[language=Terminal]
- javac -classpath \$HADOOP\_CLASSPATH -d JavaCompiled/WordCount.java
+ javac -classpath $HADOOP_CLASSPATH -d JavaCompiled/WordCount.java
 \end{lstlisting}
 
 \item Mengubah file menjadi executable .jar
