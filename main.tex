@@ -611,11 +611,11 @@ Jika sudah selesai malakukan instalasi Hadoop, maka dapat mencoba program bawaan
 \end{lstlisting} 
 \end{enumerate}
 
-\newthought{Tugas Kelompok Praktikum} \\
+\newthought{Tugas Praktikum} \\
 \begin{enumerate}
-\item Buatlah sebuah konfigurasi environment Big Data dengan beberapa Node sesuai dengan jumlah anggota dalam kelompok.
-\item Jalankan program \textit{WordCount} dengan data yang telah didownload sebelumnya, yaitu: \textbf{4300.txt}. 
-\item Buatlah Laporan tentang tugas praktikum tersebut dan perintah-perintah pada Hadoop dalam format PDF sesuai template yang diberikan di GitHub Classroom. 
+%\item Buatlah sebuah konfigurasi environment Big Data dengan beberapa Node sesuai dengan jumlah anggota dalam kelompok.
+%\item Jalankan program \textit{WordCount} dengan data yang telah didownload sebelumnya, yaitu: \textbf{4300.txt}.
+\item Buatlah Laporan tentang perintah-perintah pada Hadoop dalam format PDF sesuai template yang diberikan di GitHub Classroom. 
 \item Format penamaan file PDF adalah \textit{NIM - Nama Mahasiswa.pdf}.
 \end{enumerate}
 
@@ -655,7 +655,7 @@ Pada pertemuan sebelumnya telah mencoba program WordCount bawaan Hadoop. Jika de
 
 \item Compile file WordCount.java
 \begin{lstlisting}[language=Terminal]
- javac -classpath $HADOOP_CLASSPATH -d JavaCompiled/WordCount.java
+ javac -classpath $HADOOP_CLASSPATH -d JavaCompiled WordCount.java
 \end{lstlisting}
 
 \item Mengubah file menjadi executable .jar
@@ -665,7 +665,7 @@ Pada pertemuan sebelumnya telah mencoba program WordCount bawaan Hadoop. Jika de
 
 \item Jalankan program WordCount
 \begin{lstlisting}[language=Terminal]
- hadoop jar WordCount.jar WordCount /input/dataWordCount.txt /ResultWordCountJava
+ hadoop jar WordCount.jar WordCount /input/4300.txt /ResultWordCountJava
 \end{lstlisting}
 
 \item Cek Hasil
