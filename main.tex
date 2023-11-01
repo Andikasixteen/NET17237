@@ -611,11 +611,11 @@ Jika sudah selesai malakukan instalasi Hadoop, maka dapat mencoba program bawaan
 \end{lstlisting} 
 \end{enumerate}
 
-\newthought{Tugas Kelompok Praktikum} \\
+\newthought{Tugas Praktikum} \\
 \begin{enumerate}
-\item Buatlah sebuah konfigurasi environment Big Data dengan beberapa Node sesuai dengan jumlah anggota dalam kelompok.
-\item Jalankan program \textit{WordCount} dengan data yang telah didownload sebelumnya, yaitu: \textbf{4300.txt}. 
-\item Buatlah Laporan tentang tugas praktikum tersebut dan perintah-perintah pada Hadoop dalam format PDF sesuai template yang diberikan di GitHub Classroom. 
+%\item Buatlah sebuah konfigurasi environment Big Data dengan beberapa Node sesuai dengan jumlah anggota dalam kelompok.
+%\item Jalankan program \textit{WordCount} dengan data yang telah didownload sebelumnya, yaitu: \textbf{4300.txt}.
+\item Buatlah Laporan tentang perintah-perintah pada Hadoop dalam format PDF sesuai template yang diberikan di GitHub Classroom. 
 \item Format penamaan file PDF adalah \textit{NIM - Nama Mahasiswa.pdf}.
 \end{enumerate}
 
@@ -644,7 +644,7 @@ Pada pertemuan sebelumnya telah mencoba program WordCount bawaan Hadoop. Jika de
 
 \item Buat classpath
 \begin{lstlisting}[language=Terminal]
- export HADOOP\_CLASSPATH=\$(\$HADOOP\_HOME/bin/hadoop classpath)
+ export HADOOP_CLASSPATH=$($HADOOP_HOME/bin/hadoop classpath)
 \end{lstlisting} 
 
 \item Buat folder baru untuk menampung hasil \textit{compile} program java dan ubah hak aksesnya
@@ -655,7 +655,7 @@ Pada pertemuan sebelumnya telah mencoba program WordCount bawaan Hadoop. Jika de
 
 \item Compile file WordCount.java
 \begin{lstlisting}[language=Terminal]
- javac -classpath \$HADOOP\_CLASSPATH -d JavaCompiled/WordCount.java
+ javac -classpath $HADOOP_CLASSPATH -d JavaCompiled WordCount.java
 \end{lstlisting}
 
 \item Mengubah file menjadi executable .jar
@@ -665,7 +665,7 @@ Pada pertemuan sebelumnya telah mencoba program WordCount bawaan Hadoop. Jika de
 
 \item Jalankan program WordCount
 \begin{lstlisting}[language=Terminal]
- hadoop jar WordCount.jar WordCount /input/dataWordCount.txt /ResultWordCountJava
+ hadoop jar WordCount.jar WordCount /input/4300.txt /ResultWordCountJava
 \end{lstlisting}
 
 \item Cek Hasil
@@ -678,37 +678,12 @@ Pada pertemuan sebelumnya telah mencoba program WordCount bawaan Hadoop. Jika de
  hadoop fs -cat /ResultWordCountJava/part-r-00000
 \end{lstlisting} 
 \end{enumerate}
+
 \hrulefill
 
-\begin{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\newday{\#12 - 22 Desember 2022 menggantikan 24 November 2022
-\footnote{Mahasiswa yang hadir:
-\begin{enumerate}
-\item Adinda Awaliah
-\item Adjie Yusmunandar
-\item Arya Saputra
-\item Cut Opy Mandalisa
-%\item Faiza Yuwafiqi
-\item Jihan Dwi Sarah
-\item M. Ikhsan
-%\item Muhammad Ikrammullah
-\item Muhammad Munawir
-\item Nadzura Kumaira
-\item Nurani Harum Fardaniah
-\item Nuraula Tafiza
-\item Nurul Aflah
-\item Rauzatinur Syah
-\item Resha Russita
-\item Rizki Ilhami
-\item Salsabila Irmanda
-\item Siti Hajar Al Zahra
-\item Syarfani Akbar
-\item Taravia Fauzah
-\item Zulfahmi
-\end{enumerate}}}
-
+\newday{Part \#5}
 \newthought{Instalasi Apache Spark (PySpark)}
 
 \begin{enumerate}
@@ -762,11 +737,9 @@ export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 \end{lstlisting} 
 \end{enumerate}
 
-\newthought{Tugas Praktikum} \\
-Screenshot hasil dari langkah 5 dan masukkan ke dalam laporan. Kumpulkan melalui {\tt pull requests} dengan format pesan "\textit{Laporan dd-mm-yyyy an. Nama}".
-
 \hrulefill
 
+\begin{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \newday{\#13 - 23 Desember 2022 menggantikan 1 Desember 2022
