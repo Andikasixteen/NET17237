@@ -139,10 +139,10 @@ Zulfikar Achyar			& \url{https://github.com/ZachSuna} \\
 \item Penilaian\footnote{Sesuai ketentuan dari Kepala Lab}
 \begin{multicols}{2}
 \begin{itemize}
-\item Kehadiran
 \item Laporan
-\item Sikap
-\item Tugas
+\item Hasil Kerja
+\item Responsi
+\item Seminar
 \end{itemize}
 \end{multicols}
 
@@ -210,7 +210,7 @@ Kode SSH-Key yang telah di-\textit{copy} pada langkah sebelumnya \textit{paste}-
 \label{gam:tambah-ssh}
 \end{figure}
 
-Untuk menguji bahwa penambahan SSH-Key telah berhasil coba lakukan {\tt git push} untuk repositori laporan practice big data dari akun masing-masing. Untuk lebih jelasnya tentang GIT dapat membaca catatan pada link berikut \url{https://muhdavi.github.io/learn-git/}.
+Penjelasan lebih lanjut tentang GIT dapat membaca catatan pada link berikut \url{https://muhdavi.github.io/learn-git/}.
 \end{enumerate}
 
 \vspace*{-.5cm}
@@ -739,35 +739,9 @@ export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 
 \hrulefill
 
-\begin{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\newday{\#13 - 23 Desember 2022 menggantikan 1 Desember 2022
-\footnote{Mahasiswa yang hadir:
-\begin{enumerate}
-\item Adinda Awaliah
-%\item Adjie Yusmunandar
-%\item Arya Saputra
-\item Cut Opy Mandalisa
-\item Faiza Yuwafiqi
-\item Jihan Dwi Sarah
-\item M. Ikhsan
-%\item Muhammad Ikrammullah
-%\item Muhammad Munawir
-%\item Nadzura Kumaira
-\item Nurani Harum Fardaniah
-%\item Nuraula Tafiza
-%\item Nurul Aflah
-\item Rauzatinur Syah
-\item Resha Russita
-\item Rizki Ilhami
-\item Salsabila Irmanda
-%\item Siti Hajar Al Zahra
-%\item Syarfani Akbar
-\item Taravia Fauzah
-\item Zulfahmi
-\end{enumerate}}}
-
+\newday{Part \#6}
 \newthought{Program WordCount dengan Python}
 
 \begin{enumerate}
@@ -801,16 +775,16 @@ export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
  sudo chmod +x -R WordCountPython/
 \end{lstlisting}
 
-\item Mencoba Program di Local
-\begin{lstlisting}[language=Terminal]
- echo jangan heran jika orang cantik merasa jelek sementara orang yang jelek merasa cantik | WordCountPython/map.py | sort | WordCountPython/reduce.py
-\end{lstlisting}
+%\item Mencoba Program di Local
+%\begin{lstlisting}[language=Terminal]
+% echo jangan heran jika orang cantik merasa jelek sementara orang yang jelek merasa cantik | WordCountPython/map.py | sort | WordCountPython/reduce.py
+%\end{lstlisting}
 
 \item Jalankan Program menggunakan Hadoop
 \begin{lstlisting}[language=Terminal]
  hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3
  .3.4.jar -mapper /home/hdfs/WordCountPython/map.py -reducer /home/hdfs
- /WordCountPython/reduce.py -input /input/dataWordCount.txt -output /Re
+ /WordCountPython/reduce.py -input /input/4300.txt -output /Re
  sultWordCountPython
 \end{lstlisting}
 
@@ -826,16 +800,11 @@ export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 
 \end{enumerate}
 
-\vspace*{-.5cm}
-\newthought{Tugas Praktikum} \\
-Screenshot hasil dari langkah 8 dan 9 serta masukkan ke dalam laporan. Kumpulkan melalui {\tt pull requests} dengan format pesan "\textit{Laporan dd-mm-yyyy an. Nama}".
-
 \hrulefill
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-%\newday{\#14 - 23 Desember 2022 menggantikan 8 Desember 2022}
-
+\newday{Part \#7}
 \newthought{Program WordCount dengan PySpark}
 
 \begin{enumerate}
@@ -869,12 +838,10 @@ Screenshot hasil dari langkah 8 dan 9 serta masukkan ke dalam laporan. Kumpulkan
 \end{lstlisting} 
 \end{enumerate}
 
-\vspace*{-.5cm}
-\newthought{Tugas Praktikum} \\
-Screenshot hasil dari langkah 6 dan 7 serta masukkan ke dalam laporan. Kumpulkan melalui {\tt pull requests} dengan format pesan "\textit{Laporan dd-mm-yyyy an. Nama}".
 
 \hrulefill
 
+\begin{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 %\newday{\#15 - Tugas Individu menggantikan 15 Desember 2022}
@@ -1010,6 +977,7 @@ Berdasarakn program sebelumnya yang telah Anda coba malalui Terminal PySpark, ke
 \end{center}
 
 \hrulefill
+
 \end{comment}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
