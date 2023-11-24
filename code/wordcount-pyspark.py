@@ -3,7 +3,7 @@ spark = SparkSession.builder.master("local").appName('WordCount').getOrCreate()
 sc = spark.sparkContext
 sc.setLogLevel("ERROR")
 # input data
-data = sc.textFile("/input/dataWordCount.txt")
+data = sc.textFile("/input/4300.txt")
 # process
 counts = data.flatMap(lambda line: line.split(" ")).map(lambda word: (word, 1)).reduceByKey(lambda a, b: a + b)
 # output
