@@ -757,17 +757,17 @@ Pada pertemuan sebelumnya telah mencoba program WordCount bawaan Hadoop. Jika de
 \begin{enumerate}
 \item Download Apache Spark
 \begin{lstlisting}[language=Terminal]
- wget https://dlcdn.apache.org/spark/spark-3.3.3/spark-3.3.3-bin-hadoop3.tgz
+ wget https://dlcdn.apache.org/spark/spark-3.4.2/spark-3.4.2-bin-hadoop3.tgz
 \end{lstlisting}
 
 \item Ekstrak Apache Spark
 \begin{lstlisting}[language=Terminal]
- tar -xzvf spark-3.3.1-bin-hadoop3.tgz
+ tar -xzvf spark-3.4.2-bin-hadoop3.tgz
 \end{lstlisting}
 
 \item Pindahkan hasil ekstraksi ke {\tt /usr/local/}
 \begin{lstlisting}[language=Terminal]
- sudo mv spark-3.3.1-bin-hadoop3 /usr/local/spark
+ sudo mv spark-3.4.2-bin-hadoop3 /usr/local/spark
 \end{lstlisting} 
 
 \item Menambahkan Spark ke {\tt .bashrc}
@@ -891,15 +891,122 @@ Jika package tersebut belum tersedia, install terlebih dahulu menggunakan {\tt p
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-%\newday{\#16 - Tugas Kelompok menggantikan 22 Desember 2022}
+\newthought{Tugas Kelompok sebagai Penilaian untuk Seminar}
 
-\newthought{Tugas Kelompok menggunakan PySpark}
+\newday{TRKJ-3A}
+Beberapa poin yang perlu diperhatikan dalam mengerjakan tugas kelompok untuk kelas TRKJ-3A adalah sebagai berikut.
+\begin{itemize}
+\item Pastikan setiap komputer terkoneksi dalam satu kelompok sesuai dengan pembagian IP Address pada Tabel berikut. [10]
+\begin{table}[!ht]
+\caption{Nama Peserta dan Kelompok Kelas TRKJ-3A}
+\label{tab:peserta}
+\centering
+\begin{tabular}{lll} 
+\toprule
+Nama &	Hostname	& IP Address \\
+\midrule
+Kelompok 1\\
+\midrule
+Fazia Fathin			& master	& 192.168.1.110 \\
+Dina Azzaliana			& slave1	& 192.168.1.111 \\
+Nadila Auliya	    	& slave2	& 192.168.1.112 \\
+Putri Zara Nisfu		& slave3	& 192.168.1.113 \\
+\midrule
+Kelompok 2\\
+\midrule
+Leuwi Alsraf			& master	& 192.168.1.120 \\
+Zatus Sakina			& slave1	& 192.168.1.121 \\
+Lukmanul Hakim			& slave2	& 192.168.1.122 \\
+Siti Nadifa				& slave3	& 192.168.1.123 \\
+Muhammad Farhan			& slave4	& 192.168.1.124 \\
+\midrule
+Kelompok 3\\
+\midrule
+Muhammad Ryan			& master	& 192.168.1.130 \\
+Al Harits				& slave1	& 192.168.1.131 \\
+Arief Putra Ramadhana	& slave2	& 192.168.1.132 \\
+Muhammad Rinaldy		& slave3	& 192.168.1.133 \\
+Muhammad Riza Wahyuddin	& slave4	& 192.168.1.134 \\
+\midrule
+Kelompok 4\\
+\midrule
+M. Fredly Vanleuwen		& master	& 192.168.1.140 \\
+Andika					& slave1	& 192.168.1.141 \\
+Muhammad Raufan			& slave2	& 192.168.1.142 \\
+Mutawakil Billah		& slave3	& 192.168.1.143 \\
+\midrule
+Kelompok 5\\
+\midrule
+Muhammad Kusyairi		& master	& 192.168.1.150 \\
+Abiyyu Rivanza			& slave1	& 192.168.1.151 \\
+Imam Hidayat			& slave2	& 192.168.1.152 \\
+Rigid Franky R Putra	& slave3	& 192.168.1.153 \\
+Safriadi         		& slave4	& 192.168.1.154 \\
+\midrule
+\end{tabular}
+\end{table}
+
+\item Dapat menjalankan program WordCount.jar menggunakan Apache Hadoop dan program WordCount.py menggunakan Apache Spark dengan multinode. [20]
+\item Membuat laporan dan memberi presentasi terkait tugas yang dikerjakan. [10]
+
+\begin{comment}
+\newday{TRKJ-3A}
+\item Kelas TRKJ-3B
+\begin{table}[!ht]
+\caption{Nama Peserta dan Kelompok Kelas TRKJ-3B}
+\label{tab:peserta}
+\centering
+\begin{tabular}{lll} 
+\toprule
+Nama &	Hostname	& IP Address \\
+\midrule
+Kelompok 1\\
+\midrule
+Ajrial Akbar Wijaya		& master	& 192.168.2.110 \\
+Alif Fulhaq 			& slave1	& 192.168.2.111 \\
+Annisa Meyra			& slave2	& 192.168.2.112 \\
+Aufar					& slave3	& 192.168.2.113 \\
+\midrule
+Kelompok 2\\
+\midrule
+Hilman Asy'ari			& master	& 192.168.2.120 \\
+Delva Hamnur			& slave1	& 192.168.2.121 \\
+Erwind Toy Mirip		& slave2	& 192.168.2.122 \\
+Gusti Sanjaya			& slave3	& 192.168.2.123 \\
+Khazinatul Asrar T		& slave4	& 192.168.2.124 \\
+\midrule
+Kelompok 3\\
+\midrule
+Lil Hamdi				& master	& 192.168.2.130 \\
+M. Arief Fadillah		& slave1	& 192.168.2.131 \\
+Muhammad Habibillah		& slave2	& 192.168.2.132 \\
+Muhammad Irfan			& slave3	& 192.168.2.133 \\
+Muhammad Rafli			& slave4	& 192.168.2.134 \\
+\midrule
+Kelompok 4\\
+\midrule
+Mutia Nursyifa			& master	& 192.168.2.140 \\
+Muhammad Reza			& slave1	& 192.168.2.141 \\
+Muhammad Riyan			& slave2	& 192.168.2.142 \\
+Naila Dwi Adhini		& slave3	& 192.168.2.143 \\
+\midrule
+Kelompok 5\\
+\midrule
+Zulfikar Achyar			& master	& 192.168.2.150 \\
+Rafli Alwinsyah			& slave1	& 192.168.2.151 \\
+Rizki Maulana			& slave2	& 192.168.2.152 \\
+Sayed Furqan			& slave3	& 192.168.2.153 \\
+\midrule
+\end{tabular}
+\end{table}
+\end{comment}
+\end{itemize}
 
 \hrulefill
 
 \begin{center}
 \noindent
-\textbf{\textcolor{red}{Ingat!\\ Seminar tanggal 20/22 Desember 2023.}}
+\textbf{\textcolor{red}{Ingat!\\ Seminar tanggal 20 Desember 2023 untuk kelas TRKJ-3A dan tanggal 22 Desember 2023 untuk kelas TRKJ-3B.}}
 \end{center}
 
 \hrulefill
