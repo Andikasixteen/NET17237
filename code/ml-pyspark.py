@@ -5,7 +5,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_iris
 from pyspark.sql.session import SparkSession
-from pyspark.context session SparkContext
+from pyspark.context import SparkContext
 from pyspark.shell import spark
 from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.clustering import KMeans
